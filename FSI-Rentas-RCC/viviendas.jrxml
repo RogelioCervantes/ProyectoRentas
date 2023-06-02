@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 7.2.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="viviendas" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ecb4ff66-f26f-4c8a-88b6-a07753e6a7f6">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="BDRentas"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT *
+FROM vivienda
+ORDER BY idvivienda]]>
+	</queryString>
+	<field name="idvivienda" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="idvivienda"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vivienda"/>
+	</field>
+	<field name="tipo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="tipo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vivienda"/>
+	</field>
+	<field name="fotoviv" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.label" value="fotoviv"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vivienda"/>
+	</field>
+	<field name="detalles" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="detalles"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vivienda"/>
+	</field>
+	<field name="arrendador_idarrendador" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="arrendador_idarrendador"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vivienda"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="75" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="580" height="75" forecolor="#E3E3E3" backcolor="#5A0034" uuid="a2cbd627-ec9c-4ff3-95c8-3bb4852fd299"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="25" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte de viviendas]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="340" y="0" width="190" height="40" forecolor="#E3E3E3" backcolor="#1D1D1D" uuid="27675376-882e-4359-83b7-4732843c9956"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Foto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="50" height="40" forecolor="#E3E3E3" backcolor="#1D1D1D" uuid="330295ad-7bab-42c1-a4d3-4593ecea366e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="530" y="0" width="50" height="40" forecolor="#E3E3E3" backcolor="#1D1D1D" uuid="50bcfe72-abc4-4e1c-816f-ef97c116928c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Ador]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="50" y="0" width="100" height="40" forecolor="#E3E3E3" backcolor="#1D1D1D" uuid="f7c7faa1-c3c4-47ae-8e3a-8ec96877ee5b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="150" y="0" width="190" height="40" forecolor="#E3E3E3" backcolor="#1D1D1D" uuid="73623d08-c0bd-4bc6-981d-d36b09e1c67a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Detalles]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="120" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="50" height="120" forecolor="#E3E3E3" backcolor="#313131" uuid="b6a76ad8-9d40-4066-917c-23c0d9e839e0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7cce3bed-d4c8-42e8-97a5-693fff670640"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{idvivienda}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="50" y="0" width="100" height="120" forecolor="#E3E3E3" backcolor="#313131" uuid="d9d64f5a-6d40-4dbc-8621-0e3ae11f0540">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="449494b6-8f85-4d6e-ae1e-790da7ea9ba3"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="150" y="0" width="190" height="120" forecolor="#E3E3E3" backcolor="#313131" uuid="059a5846-c2d8-4a2a-95ad-16fd81167128">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="701da458-8137-483e-a5a4-386054ab740c"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{detalles}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="530" y="-1" width="50" height="121" forecolor="#E3E3E3" backcolor="#313131" uuid="a5779d37-6f04-4f93-b67b-e4fc348c36c7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="73b7fb39-7f60-4697-b571-3bd96e815094"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{arrendador_idarrendador}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement mode="Opaque" x="340" y="0" width="190" height="120" backcolor="#313131" uuid="d537e6ff-f1de-4913-9f0b-879787c1a6f7"/>
+				<imageExpression><![CDATA[$F{fotoviv}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

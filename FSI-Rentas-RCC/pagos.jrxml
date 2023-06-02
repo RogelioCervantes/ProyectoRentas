@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 7.2.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pagos" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="686661ef-cd6c-4617-8528-43d6990a5047">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="BDRentas"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT *
+FROM pago
+ORDER BY fechapago DESC]]>
+	</queryString>
+	<field name="idpago" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="idpago"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pago"/>
+	</field>
+	<field name="fechapago" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="fechapago"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pago"/>
+	</field>
+	<field name="monto" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="monto"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pago"/>
+	</field>
+	<field name="contrato_idcontrato" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="contrato_idcontrato"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pago"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="75" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="580" height="75" forecolor="#E3E3E3" backcolor="#5A0034" uuid="b4aba321-c212-4c8b-a6a6-8902baf1cb54"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="25" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte de pagos]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="80" height="40" forecolor="#E3E3E3" backcolor="#1D1D1D" uuid="11da9627-b263-4f18-b2c0-f05e1039bfa1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="60f63bb7-c791-4d15-9e32-61402888fb5b"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="80" y="0" width="200" height="40" forecolor="#E3E3E3" backcolor="#1D1D1D" uuid="bcdca37c-7086-400c-af5a-5bba058e7e86">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="60f63bb7-c791-4d15-9e32-61402888fb5b"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha del pago]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="280" y="0" width="200" height="40" forecolor="#E3E3E3" backcolor="#1D1D1D" uuid="d65afae5-2b18-419a-a3e4-c22b6d09bdbc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="60f63bb7-c791-4d15-9e32-61402888fb5b"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Monto pagado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="480" y="0" width="100" height="40" forecolor="#E3E3E3" backcolor="#1D1D1D" uuid="9fd40632-21ba-4fcc-8066-343b15c1785a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="60f63bb7-c791-4d15-9e32-61402888fb5b"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Contrato]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="80" height="40" forecolor="#E3E3E3" backcolor="#313131" uuid="e84e7433-ee16-4c48-8ddd-78dc80f62651">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6ab2bb1f-02e9-4264-a9e5-87425c30e79a"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{idpago}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="80" y="0" width="200" height="40" forecolor="#E3E3E3" backcolor="#313131" uuid="d5899ddb-cab9-4f39-bea9-e73bc658fdc2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0a7a349a-f7d1-4799-8e9e-8d71236564ae"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechapago}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="280" y="0" width="200" height="40" forecolor="#E3E3E3" backcolor="#313131" uuid="2df10513-7ce5-4ad7-bfb5-186a413957da">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fbda5ebb-48ac-4bb7-ad7d-6693806b3149"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{monto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="480" y="0" width="100" height="40" forecolor="#E3E3E3" backcolor="#313131" uuid="deefc3c0-b9de-43c9-a867-256a0d523232">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="31350fdc-15b0-474e-8b46-945a0aaa802c"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{contrato_idcontrato}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="19" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="19" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="19" splitType="Stretch"/>
+	</summary>
+</jasperReport>

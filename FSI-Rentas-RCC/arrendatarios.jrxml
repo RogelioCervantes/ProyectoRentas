@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 7.2.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="arrendatarios" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b3e8804e-73a1-4e0f-84a6-823290f6fe81">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="BDRentas"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT *
+FROM arrendatario
+ORDER BY idarrendatario]]>
+	</queryString>
+	<field name="idarrendatario" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="idarrendatario"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="arrendatario"/>
+	</field>
+	<field name="nombretario" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nombretario"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="arrendatario"/>
+	</field>
+	<field name="estatus" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="estatus"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="arrendatario"/>
+	</field>
+	<field name="sexotario" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="sexotario"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="arrendatario"/>
+	</field>
+	<field name="fototario" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.label" value="fototario"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="arrendatario"/>
+	</field>
+	<field name="passtario" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="passtario"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="arrendatario"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="75" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="580" height="75" forecolor="#E3E3E3" backcolor="#5A0034" uuid="1adb8065-47ef-44fb-8411-e05a2c6bbaba"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="25" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte de arrendatarios]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="80" height="40" forecolor="#E3E3E3" backcolor="#1D1D1D" uuid="3a6e3863-cb58-46cb-a464-3fa08d5b0e2c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="60f63bb7-c791-4d15-9e32-61402888fb5b"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="80" y="0" width="100" height="40" forecolor="#E3E3E3" backcolor="#1D1D1D" uuid="2c7c3243-7890-4043-9744-ab29e229d789">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="82a2ddae-2bee-4894-bf91-9a58b2a6fdbe"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="180" y="0" width="100" height="40" forecolor="#E3E3E3" backcolor="#1D1D1D" uuid="3f2e893f-2798-4cb0-ae70-9260c79acffe">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c2d8c634-2f51-4f43-8deb-d36abb9d51bf"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Estatus]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="280" y="0" width="100" height="40" forecolor="#E3E3E3" backcolor="#1D1D1D" uuid="ae2d9379-2445-4c27-b544-48c05ddefa03">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6c3a6b73-3e50-4008-8a3e-7a70a475de23"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sexo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="380" y="0" width="100" height="40" forecolor="#E3E3E3" backcolor="#1D1D1D" uuid="2867d1fc-45ed-4bd7-823f-9b6e5c0b8dc7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="70f5f005-5fa6-4d5d-bfb4-9252cdfface6"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contraseña]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="480" y="0" width="100" height="40" forecolor="#E3E3E3" backcolor="#1D1D1D" uuid="a5d0bfa5-7ef4-4c17-a998-b959379a7080"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Foto]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="60" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="80" height="60" forecolor="#E3E3E3" backcolor="#313131" uuid="4222fb03-063c-4521-80a2-dc8fc1593a0f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="60f63bb7-c791-4d15-9e32-61402888fb5b"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{idarrendatario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="80" y="0" width="100" height="60" forecolor="#E3E3E3" backcolor="#313131" uuid="0a9b2186-7e3a-49e0-9529-afb5888f44c1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="82a2ddae-2bee-4894-bf91-9a58b2a6fdbe"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombretario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="180" y="0" width="100" height="60" forecolor="#E3E3E3" backcolor="#313131" uuid="b3ede98e-d734-4e84-86b7-d474a40aba55">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c2d8c634-2f51-4f43-8deb-d36abb9d51bf"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{estatus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="280" y="0" width="100" height="60" forecolor="#E3E3E3" backcolor="#313131" uuid="716b3bf9-c2a6-4d20-8c20-e8057da0f0b8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6c3a6b73-3e50-4008-8a3e-7a70a475de23"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sexotario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="380" y="0" width="100" height="60" forecolor="#E3E3E3" backcolor="#313131" uuid="06cee742-d906-4101-9d80-497caab0f0e3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="70f5f005-5fa6-4d5d-bfb4-9252cdfface6"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{passtario}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement mode="Opaque" x="480" y="0" width="100" height="60" backcolor="#313131" uuid="e58f83e9-311d-44da-bde9-6006febdcd89"/>
+				<imageExpression><![CDATA[$F{fototario}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

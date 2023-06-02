@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 7.2.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="arrendador_solicitudes_parametros" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="685a4107-8b72-46e4-af8d-da67842365a7">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="BDRentas"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="idvivsol" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT * 
+FROM solicitudes
+WHERE idviv =  $P{idvivsol} ]]>
+	</queryString>
+	<field name="idsolicitud" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="idsolicitud"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="solicitudes"/>
+	</field>
+	<field name="nombresol" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nombresol"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="solicitudes"/>
+	</field>
+	<field name="sexosol" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="sexosol"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="solicitudes"/>
+	</field>
+	<field name="fotosol" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.label" value="fotosol"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="solicitudes"/>
+	</field>
+	<field name="idviv" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="idviv"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="solicitudes"/>
+	</field>
+	<field name="passsol" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="passsol"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="solicitudes"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="75" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="580" height="75" forecolor="#E3E3E3" backcolor="#5A0034" uuid="787e080e-f802-4665-b10d-8d99003c9635"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="25" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte de solicitudes]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="80" height="40" forecolor="#E3E3E3" backcolor="#1D1D1D" uuid="1d73eeb4-5eaa-4118-80e6-05a4f06351cd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7eb5027c-7001-444f-bdb4-3c0ef63b2f99"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="80" y="0" width="200" height="40" forecolor="#E3E3E3" backcolor="#1D1D1D" uuid="13420376-79b6-4c46-a216-b7ed0a705586">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d6ecb304-b735-46a4-aeb1-40dae20f0128"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="280" y="0" width="100" height="40" forecolor="#E3E3E3" backcolor="#1D1D1D" uuid="e1307845-6839-4312-b545-639d2fd66e5a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7908feb4-4a79-4c43-b222-df928a2a0fd7"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sexo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="380" y="0" width="100" height="40" forecolor="#E3E3E3" backcolor="#1D1D1D" uuid="d0663e74-8dcd-4e4c-9a0d-c9c0c63bb194">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="848d1574-77db-4662-85d3-09b391a8b0e4"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contraseña]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="480" y="0" width="100" height="40" forecolor="#E3E3E3" backcolor="#1D1D1D" uuid="f5be177a-8268-4e00-8783-e94fd5139f84"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Foto]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="60" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="80" height="60" forecolor="#E3E3E3" backcolor="#313131" uuid="7ff81c6b-a5e3-4eac-9f21-68a2949933b7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7eb5027c-7001-444f-bdb4-3c0ef63b2f99"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{idsolicitud}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="80" y="0" width="200" height="60" forecolor="#E3E3E3" backcolor="#313131" uuid="5dacee36-f980-4480-99c1-7d91ec424eb3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d6ecb304-b735-46a4-aeb1-40dae20f0128"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombresol}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="280" y="0" width="100" height="60" forecolor="#E3E3E3" backcolor="#313131" uuid="0aec1d69-e388-4ced-8c8d-e758a93963c2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7908feb4-4a79-4c43-b222-df928a2a0fd7"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sexosol}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement mode="Opaque" x="480" y="0" width="100" height="60" backcolor="#313131" uuid="cf4dd92e-4317-44d8-9641-48eb0dc81fb6"/>
+				<imageExpression><![CDATA[$F{fotosol}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement mode="Opaque" x="380" y="0" width="100" height="60" forecolor="#E3E3E3" backcolor="#313131" uuid="6e23fd90-583c-4fbe-b5bd-ee6bb6a28a20">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="848d1574-77db-4662-85d3-09b391a8b0e4"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{passsol}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="19" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="19" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="19" splitType="Stretch"/>
+	</summary>
+</jasperReport>
